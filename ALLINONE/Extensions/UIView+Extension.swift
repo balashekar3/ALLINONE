@@ -214,7 +214,7 @@ extension UIView{
         let backgroundView = UIView()
         backgroundView.frame = CGRect.init(x: 0, y: 0, width: self.bounds.width, height: self.bounds.height)
         backgroundView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
-        backgroundView.tag = 475647
+        backgroundView.tag = 123
         
         var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
         activityIndicator = UIActivityIndicatorView(frame: CGRect.init(x: 0, y: 0, width: 50, height: 50))
@@ -231,7 +231,7 @@ extension UIView{
     }
     
     func activityStopAnimating() {
-        if let background = viewWithTag(475647){
+        if let background = viewWithTag(123){
             background.removeFromSuperview()
         }
         self.isUserInteractionEnabled = true
@@ -282,7 +282,7 @@ extension UIView{
 extension UIView {
     /// To show loader
     func showSpinner() {
-        let activityIndicator = UIActivityIndicatorView(style: .gray)
+        let activityIndicator = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
         activityIndicator.color = .appBlack()
         activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         activityIndicator.hidesWhenStopped = true
